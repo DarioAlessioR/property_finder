@@ -15,10 +15,9 @@
   <body>
 
     <% if ["public", "devise"].include?(controller.controller_name) %>
-      <%= render "layouts/nav/public" %>
-    <header>
-      <%= render "layouts/nav/public" %>
-    </header>
+      <header>
+        <%= render "layouts/nav/public" %>
+      </header>
     <% else %>
       <%= render "layouts/nav/dashboard" %>
     <% end %>
