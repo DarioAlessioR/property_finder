@@ -18,8 +18,16 @@
       <header>
         <%= render "layouts/nav/public" %>
       </header>
+      <%= yield %>
     <% else %>
-      <%= render "layouts/nav/dashboard" %>
+
+    <div class="container-fluid">
+      <div class="row">
+        <%= render "layouts/nav/dashboard" %>
+        <%= yield %>
+      </div>
+    </div>
+
     <% end %>
 
   <!--
@@ -38,9 +46,6 @@
       </div>
     </div>
 -->
-    
-
-    <%= yield %>
 
     <%= render "layouts/footer" %>
 
