@@ -1,12 +1,35 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @property %>
+<table class="table table-striped table-hover table-sm">
+  <thead>
+    <tr>
+      <th scope="col" class="border border-primary">Name</th>
+      <th scope="col" class="border border-primary">Address</th>
+      <th scope="col" class="border border-primary">Price</th>
+      <th scope="col" class="border border-primary">Rooms</th>
+      <th scope="col" class="border border-primary">Bathrooms</th>
+      <th scope="col" class="border border-primary">Area</th>
+      <th scope="col" class="border border-primary">Kind</th>
+      <th scope="col" class="border border-primary">Operation</th>
+      <th scope="col" class="border border-primary">City</th>
+      <th scope="col" class="border border-primary">Zone</th>
+      <th scope="col" class="border border-primary">Description</th>
+      <th scope="col" class="border border-primary">Lot area</th>
+      <th scope="col" class="border border-primary">Parkings</th>
+    </tr>
+  </thead>
+
+    <%= render @property %>
+  
+</table>
 
 <div>
-  <%= link_to "Edit this property", edit_property_path(@property) %> |
-  <%= link_to "Back to properties", properties_path %>
-
-  <%= button_to "Destroy this property", @property, method: :delete %>
+  <%= link_to "Edit this property", edit_property_path(@property), class: "btn btn-primary" %>
+  <br>
+  <br>
+  <%= button_to "Destroy this property", @property, method: :delete, class: "bg-warning rounded" %>
+  <br>
+  <%= link_to "Back to properties", properties_path, class: "btn btn-primary" %>
 </div>
 
 <div class="mt-sm-5"></div>

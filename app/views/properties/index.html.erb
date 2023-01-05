@@ -3,14 +3,39 @@
 <h1>Properties</h1>
 
 <div id="properties">
+
+<table class="table table-striped table-hover table-sm">
+  <thead>
+    <tr>
+      <th scope="col" class="border border-primary">Name</th>
+      <th scope="col" class="border border-primary">Address</th>
+      <th scope="col" class="border border-primary">Price</th>
+      <th scope="col" class="border border-primary">Rooms</th>
+      <th scope="col" class="border border-primary">Bathrooms</th>
+      <th scope="col" class="border border-primary">Area</th>
+      <th scope="col" class="border border-primary">Kind</th>
+      <th scope="col" class="border border-primary">Operation</th>
+      <th scope="col" class="border border-primary">City</th>
+      <th scope="col" class="border border-primary">Zone</th>
+      <th scope="col" class="border border-primary">Description</th>
+      <th scope="col" class="border border-primary">Lot area</th>
+      <th scope="col" class="border border-primary">Parkings</th>
+      <th scope="col" class="border border-primary">Action</th>
+    </tr>
+  </thead>
+
   <% @properties.each do |property| %>
     <%= render property %>
-    <p>
+    <td>
       <%= link_to "Show this property", property %>
-    </p>
+    </td>
+    <tr>
+    
   <% end %>
+
+</table>
 </div>
 
-<%= link_to "New property", new_property_path %>
+<%= link_to "New property", new_property_path, class: "btn btn-primary" %>
 
 <div class="mt-sm-5"></div>
