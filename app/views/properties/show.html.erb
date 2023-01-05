@@ -24,12 +24,12 @@
 </table>
 
 <div>
-  <%= link_to "Edit this property", edit_property_path(@property) %>
+  <%= link_to "Edit this property", edit_property_path(@property), class: "btn btn-primary" %>
   <br>
   <br>
   <%= button_to "Destroy this property", @property, method: :delete, class: "bg-warning rounded" %>
   <br>
-  <%= link_to "Back to properties", properties_path %>
+  <%= link_to "Back to properties", properties_path, class: "btn btn-primary" %>
 </div>
 
 <div class="mt-sm-5"></div>
