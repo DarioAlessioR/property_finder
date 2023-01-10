@@ -75,6 +75,12 @@
     <%= form.label :parkings, style: "display: block" %>
     <%= form.number_field :parkings %>
   </div>
+
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
 <br>
   <div>
     <%= form.submit class: "btn btn-primary" %>
