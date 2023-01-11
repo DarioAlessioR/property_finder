@@ -39,8 +39,6 @@
     <%= property.parkings %>
   </td>
   <td>
-    <div class="img-fluid" max-width="50px" max-height="50px">
-    <%= image_tag(property.image_url, :size => "100x100") if property.image %>
-    </div>
+    <%= image_tag(property.image_url, :width => "100") if property.image %>
   </td>
 </div>
