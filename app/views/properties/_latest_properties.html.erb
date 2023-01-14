@@ -1,6 +1,8 @@
 <% @properties.each do |property| %>
     <div class="col-3">
-        <%= property_thumbnail property %>
+        <%= property_thumbnail(property) %>
+        <%= property.name %>
+        <p><%= property.price %>" $"<p>
     </div>
 <% end %>
 
