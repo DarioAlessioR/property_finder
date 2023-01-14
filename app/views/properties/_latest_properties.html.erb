@@ -1,10 +1,19 @@
 <% @properties.each do |property| %>
+  
     <div class="col-3">
-        <%= property_thumbnail(property) %>
+        <%= link_to property_thumbnail(property), property_path(property) %>
         <br>
-        <h4><%= property.name %></h4>
+        <h4><%= link_to property.name, property_path(property) %></h4>
         <h5><%= property.price %>" $"</h5>
+        <h5><%= property.address %></h5>
+        <h5><%= property.city %></h5>
     </div>
+   
+
+
 <% end %>
+
+
+
 
 
