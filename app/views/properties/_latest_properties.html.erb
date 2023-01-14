@@ -3,14 +3,10 @@
     <div class="col-3">
         <%= link_to property_thumbnail(property), property_path(property) %>
         <br>
-        <h4><%= link_to property.name, property_path(property) %></h4>
-        <h5><%= property.price %>" $"</h5>
-        <h5><%= property.address %></h5>
-        <h5><%= property.city %></h5>
+        <h5><%= property.name %></h5>
+        <h5><%= property.price %> $</h5>
+        <p><%= property.zone + ", " + property.city %></p>
     </div>
-   
-
-
 <% end %>
 
 
