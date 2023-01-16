@@ -1,7 +1,15 @@
 <% @properties.each do |property| %>
+  
     <div class="col-3">
-        <%= property_thumbnail property %>
+        <%= link_to property_thumbnail(property), property_path(property) %>
+        <br>
+        <h5><%= property.name %></h5>
+        <h5><%= property.price %> $</h5>
+        <p><%= property.zone + ", " + property.city %></p>
     </div>
 <% end %>
+
+
+
 
 
