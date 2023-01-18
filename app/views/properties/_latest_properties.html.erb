@@ -1,7 +1,8 @@
 <% @properties.each do |property| %>
   
     <div class="col-4">
-        <%= link_to property_thumbnail(property), property_path(property) %>
+    <!--    <%= link_to property_thumbnail(property), property_path(property) %>   -->
+        <%= image_tag(property.image_url, :width => "300") if property.image %>
         <br>
         <h5><%= property.name %></h5>
         <h5><%= property.price %> $</h5>
