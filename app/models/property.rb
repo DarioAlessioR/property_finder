@@ -4,6 +4,6 @@ class Property < ApplicationRecord
 
     scope :latest, -> { order(created_at: :desc) }
 
-    has_may_attached :pictures, dependent: :destroy 
+    has_many_attached :pictures, dependent: :destroy 
 end
 
