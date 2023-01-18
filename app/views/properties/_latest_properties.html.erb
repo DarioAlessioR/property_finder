@@ -1,11 +1,14 @@
 <% @properties.each do |property| %>
   
-    <div class="col-3">
-        <%= link_to property_thumbnail(property), property_path(property) %>
+    <div class="col-4">
+    <!--    <%= link_to property_thumbnail(property), property_path(property) %>   -->
+        <%= image_tag(property.image_url, :width => "300") if property.image %>
         <br>
         <h5><%= property.name %></h5>
         <h5><%= property.price %> $</h5>
         <p><%= property.zone + ", " + property.city %></p>
+        <p><%= property.area %> Mt2</p>
+        <p><%= property.rooms %>  <i class="fa-solid fa-bed"></i> <%= property.bathrooms %> <i class="fa-solid fa-shower"></i> <%= property.parkings %> <i class="fa-solid fa-car"></i></p>
     </div>
 <% end %>
 
