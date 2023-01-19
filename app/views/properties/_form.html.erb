@@ -85,6 +85,13 @@
   </div>
 
 <br>
+
+  <div>
+    <%= form.label :picture %>
+    <%= form.file_field :pictures, multiple: true %>
+  </div>
+  
+<br>
   <div>
     <%= form.submit class: "btn btn-primary" %>
   </div>

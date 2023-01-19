@@ -41,4 +41,17 @@
   <td>
     <%= image_tag(property.image_url, :width => "100") if property.image %>
   </td>
+
+  <div class="d-flex flex-wrap justify-content-center background-color: #ggg; ">
+<% property.pictures.each do |picture| %>
+
+<div class="p-2">
+  <%= image_tag(picture, :width => "150") %>
 </div>
+
+<% end %>
+</div>
+
+</div>
+
+
