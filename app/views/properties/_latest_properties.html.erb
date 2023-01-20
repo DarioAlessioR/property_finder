@@ -21,5 +21,12 @@
   <%= form.submit "Search" %>
 <% end %>
 
-
+<% if params[:query].present? %>
+  <h2>Results for <%= params[:query] %></h2>
+  <ul>
+    <% @properties.each do |property| %>
+      <li><%= property.name %></li>
+    <% end %>
+  </ul>
+<% end %>
 
