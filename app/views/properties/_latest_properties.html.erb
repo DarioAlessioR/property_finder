@@ -13,20 +13,4 @@
 <% end %>
 
 
-    <!--    este codigo se tiene que ir..es solo una prueba  -->
-
-<%= form_with url: "/search", method: :get do |form| %>
-  <%= form.label :query, "Search for:" %>
-  <%= form.text_field :query %>
-  <%= form.submit "Search" %>
-<% end %>
-
-<% if params[:query].present? %>
-  <h2>Results for <%= params[:query] %></h2>
-  <ul>
-    <% @properties.each do |property| %>
-      <li><%= property.name %></li>
-    <% end %>
-  </ul>
-<% end %>
 
