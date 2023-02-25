@@ -32,7 +32,10 @@
   <br>
   <%= button_to "Destroy this property", @property, method: :delete, class: "bg-warning rounded" %>
   <br>
-  <%= link_to "Back to properties", properties_path, class: "btn btn-primary" %>
+  <%= link_to "Go to properties' list", properties_path, class: "btn btn-primary" %>
+  <br>
+  <br>
+  <%= link_to "Back to home", root_path, class: "btn btn-primary" %>
 </div>
 
 <% else %>
