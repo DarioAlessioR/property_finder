@@ -1,15 +1,31 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.carousel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    top: 50px;
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+    margin: 7px;
+}
+
+.carousel:hover {
+    position: absolute;
+    margin-left: 20%;
+    width: 45%;
+    height: auto;
+    overflow: hidden;
+    top: 50px;
+}
+
+.table {
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+}

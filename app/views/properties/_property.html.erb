@@ -1,4 +1,20 @@
-<div id="<%= dom_id property %>">
+
+<% if "show" == action_name %>
+
+  <div>
+<% property.pictures.each do |picture| %>
+
+<div  class="carousel">
+  <%= image_tag(picture) %>
+</div>
+
+<% end %>
+</div>
+
+<% end %>
+
+
+<div id="<%= dom_id property %>" class="table">
   <td>
     <%= property.name %>
   </td>
@@ -42,19 +58,7 @@
     <%= image_tag(property.image_url, :width => "100") if property.image %>
   </td>
 
- <% if "show" == action_name %>
-
-  <div class="d-flex flex-wrap justify-content-center background-color: #ggg; ">
-<% property.pictures.each do |picture| %>
-
-<div class="p-2">
-  <%= image_tag(picture, :width => "150") %>
-</div>
-
-<% end %>
-</div>
-
-<% end %>
+ 
 <!--
   <td>
     <%= link_to 'Show', property %>
