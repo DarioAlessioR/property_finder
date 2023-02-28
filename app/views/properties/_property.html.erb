@@ -1,7 +1,7 @@
 
 <% if "show" == action_name %>
 
-  <div>
+  <div class="d-flex flex-wrap justify-content-center background-color: #ggg; ">
 <% property.pictures.each do |picture| %>
 
 <div  class="carousel">
@@ -14,7 +14,7 @@
 <% end %>
 
 
-<div id="<%= dom_id property %>" class="table">
+<div id="<%= dom_id property %>">
   <td>
     <%= property.name %>
   </td>
@@ -55,7 +55,7 @@
     <%= property.parkings %>
   </td>
   <td>
-    <%= image_tag(property.image_url, :width => "100") if property.image %>
+    <%= image_tag(property.image_url, :width => "50") if property.image %>
   </td>
 
  

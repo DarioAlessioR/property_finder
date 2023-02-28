@@ -1,31 +1,18 @@
 .carousel {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    top: 50px;
+    width: 30px;
+    height: 30px;
+    top: 1px;
+    margin: 7px;
 }
 
 .carousel img {
     width: 100%;
     height: 100%;
-    transition: all 0.5s ease;
-    margin: 7px;
 }
 
 .carousel:hover {
     position: absolute;
-    margin-left: 20%;
+    margin-top: 60px;
     width: 45%;
     height: auto;
-    overflow: hidden;
-    top: 50px;
-}
-
-.table {
-    width: 100%;
-    height: 100%;
-    margin-top: 200px;
 }
