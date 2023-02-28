@@ -16,3 +16,7 @@
     width: 45%;
     height: auto;
 }
+
+.sendback {
+    z-index: -1;
+}
