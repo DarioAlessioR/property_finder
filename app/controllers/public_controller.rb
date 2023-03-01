@@ -6,6 +6,14 @@ class PublicController < ApplicationController
       @properties = @properties.where(price: params[:min_price]..params[:max_price])
     end
 
+    if params[:min_price].present? && params[:max_price].blank?
+      @properties = @properties.where(price: params[:min_price]..params[9999999999999999])
+    end
+
+    if params[:min_price].blank? && params[:max_price].present?
+      @properties = @properties.where(price: params[0]..params[:max_price])
+    end
+
     if params[:min_rooms].present? && params[:max_rooms].present?
       @properties = @properties.where(rooms: params[:min_rooms]..params[:max_rooms])
     end
