@@ -8,13 +8,30 @@
     </div>
   </div>
 
+ <div class="container">
 <%= form_with url: root_path, method: :get do |form| %>
-  <%= form.number_field :min_price, placeholder: "Min price", class: "mb-4" %>
+  <%= form.number_field :min_price, placeholder: "Min price", style: "width: 100px;", value: params[:min_price] %>
   
-  <%= form.number_field :max_price, placeholder: "Max price", class: "mb-4" %>
+  <%= form.number_field :max_price, placeholder: "Max price", style: "width: 100px;", value: params[:max_price] %>
+
+  <%= form.number_field :min_rooms, placeholder: "Min rooms", style: "width: 100px;", value: params[:min_rooms] %>
+
+  <%= form.number_field :max_rooms, placeholder: "Max rooms", style: "width: 100px;", value: params[:max_rooms] %>
+
+  <%= form.number_field :min_bathrooms, placeholder: "Min bath", style: "width: 100px;", value: params[:min_bathrooms] %>
+
+  <%= form.number_field :max_bathrooms, placeholder: "Max bath", style: "width: 100px;", value: params[:max_bathrooms] %>
+
+  <%= form.number_field :min_area, placeholder: "Min area", style: "width: 100px;", value: params[:min_area] %>
+
+  <%= form.number_field :max_area, placeholder: "Max area", style: "width: 100px;", value: params[:max_area] %>
+
+  
 
   <%= form.submit "Search", class: "btn btn-primary" %>
 <% end %>
+
+</div>
 
 <section id="latest_properties" class="mb-5">
   <div class="container">
