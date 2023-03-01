@@ -8,8 +8,8 @@
     </div>
   </div>
 
- <div class="container">
-<%= form_with url: root_path, method: :get do |form| %>
+ <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+  <%= form_with url: root_path, method: :get do |form| %>
   <%= form.number_field :min_price, placeholder: "Min price", style: "width: 100px;", value: params[:min_price] %>
   
   <%= form.number_field :max_price, placeholder: "Max price", style: "width: 100px;", value: params[:max_price] %>
@@ -28,7 +28,7 @@
 
   
 
-  <%= form.submit "Search", class: "btn btn-primary" %>
+  <%= form.submit "Search", class: "btn btn-primary", style: "margin-left: 10px;" %>
 <% end %>
 
 </div>
