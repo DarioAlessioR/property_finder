@@ -2,7 +2,7 @@
   
     <div class="col-4">
     <!--    <%= link_to property_thumbnail(property), property_path(property) %>   -->
-        <%= link_to image_tag(property.image_url, :size => "300x200"), property_path(property) if property.image %>
+        <%= link_to image_tag(property.image_url, :size => "270x180"), property_path(property) if property.image %>
         <br>
         <h5><%= property.name %></h5>
         <h5><%= property.price %> $</h5>

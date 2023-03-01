@@ -3,6 +3,7 @@
 <table class="table table-striped table-hover table-sm">
   <thead>
     <tr>
+      <th scope="col" class="border border-primary">Id</th>
       <th scope="col" class="border border-primary">Name</th>
       <th scope="col" class="border border-primary">Address</th>
       <th scope="col" class="border border-primary">Price</th>
@@ -32,15 +33,40 @@
   <br>
   <%= button_to "Destroy this property", @property, method: :delete, class: "bg-warning rounded" %>
   <br>
-  <%= link_to "Back to properties", properties_path, class: "btn btn-primary" %>
+  <%= link_to "Go to properties' list", properties_path, class: "btn btn-primary" %>
+  <br>
+  <br>
+  <%= link_to "Back to home", root_path, class: "btn btn-primary" %>
 </div>
 
 <% else %>
+
+<div class="container">
+  
+<div class="card mb-3 sendback" style="max-width: 1540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="/assets/agent.jpg" class="img-fluid rounded-start" alt="agent">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Jhon Doe</h5>
+        <p class="card-text">20+ years of real estate experience in your area. Buy, sell, rent, home, commercial, office, land...</p>
+        <p class="card-text">Avoid loosing time and running unnecessary risks. Let us help you make your dream come true. </p>
+        <a href="#" class="btn btn-primary">Call us!</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
   <div>
     <br>
     <br>
     <%= link_to "Back to home", root_path, class: "btn btn-primary" %>
   </div>
 <% end %>
+
+
 
 <div class="mt-sm-5"></div>

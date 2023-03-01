@@ -3,12 +3,37 @@
   <div class="jumbotrom">
     <div class="container">
       <h1 class="display-3">Search for your new home today...</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      <p>Browse our site and call us for the property you like. If you can't find one you like, call us and we'll find it for you!</p>
+    <!--  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
     </div>
   </div>
 
+ <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+  <%= form_with url: root_path, method: :get do |form| %>
+  <%= form.number_field :min_price, placeholder: "Min price", style: "width: 100px;", value: params[:min_price] %>
+  
+  <%= form.number_field :max_price, placeholder: "Max price", style: "width: 100px;", value: params[:max_price] %>
 
+  <%= form.number_field :min_rooms, placeholder: "Min rooms", style: "width: 100px;", value: params[:min_rooms] %>
+
+  <%= form.number_field :max_rooms, placeholder: "Max rooms", style: "width: 100px;", value: params[:max_rooms] %>
+
+  <%= form.number_field :min_bathrooms, placeholder: "Min bath", style: "width: 100px;", value: params[:min_bathrooms] %>
+
+  <%= form.number_field :max_bathrooms, placeholder: "Max bath", style: "width: 100px;", value: params[:max_bathrooms] %>
+
+  <%= form.number_field :min_area, placeholder: "Min area", style: "width: 100px;", value: params[:min_area] %>
+
+  <%= form.number_field :max_area, placeholder: "Max area", style: "width: 100px;", value: params[:max_area] %>
+
+  
+
+  <%= form.submit "Search", class: "btn btn-primary", style: "margin-left: 10px;" %>
+  <%= link_to "Clear", root_path, class: "btn btn-primary", style: "margin-left: 10px;" %>
+  
+<% end %>
+
+</div>
 
 <section id="latest_properties" class="mb-5">
   <div class="container">
@@ -21,31 +46,50 @@
 
 
 <div class="container">
-  
-<div class="row align-items-md-stretch">
-      <div class="col-md-4">
-        <div class="h-100 p-5 text-bg-dark rounded-3">
-          <h2>Change the background</h2>
-          <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then, mix and match with additional component themes and more.</p>
-          <button class="btn btn-outline-light" type="button">Example button</button>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Add borders</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="h-100 p-5 bg-light border rounded-3">
-          <h2>Add borders</h2>
-          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
-          <button class="btn btn-outline-secondary" type="button">Example button</button>
-        </div>
+
+<div class="card mb-3" style="max-width: 1540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="assets/agent.jpg" class="img-fluid rounded-start" alt="agent">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Jhon Doe</h5>
+        <p class="card-text">20+ years of real estate experience in your area. Buy, sell, rent, home, commercial, office, land...</p>
+        <p class="card-text">Avoid loosing time and running unnecessary risks. Let us help you make your dream come true. </p>
+        <a href="#" class="btn btn-primary">Call us!</a>
       </div>
     </div>
+  </div>
+</div>
+
+    <!--
+<div class="row align-items-md-stretch">
+      <div class="col-md-12">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>Jhon Doe</h2>
+          <p>20 years of real estate experience in your area. Buy, sell, rent, home, commercial, office, land... </p>
+          <button class="btn btn-outline-light" type="button">Call us!</button>
+        </div>
+      </div>
+
+    
+      <div class="col-md-4">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Add borders</h2>
+          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="h-100 p-5 bg-light border rounded-3">
+          <h2>Add borders</h2>
+          <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both column's content for equal-height.</p>
+          <button class="btn btn-outline-secondary" type="button">Example button</button>
+        </div>
+      </div>
+      -->
+    </div>
  </div>
-
-
+ <div class="mt-sm-5"></div>
 </main>

@@ -14,7 +14,7 @@
 
   <body>
 
-    <% if ["public", "devise"].include?(controller.controller_name) %>
+    <% if ["public", "devise", "properties"].include?(controller.controller_name) %>
       <header>
         <%= render "layouts/nav/public" %>
       </header>
