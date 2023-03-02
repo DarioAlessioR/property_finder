@@ -26,7 +26,12 @@
 
   <%= form.number_field :max_area, placeholder: "Max area", style: "width: 100px;", value: params[:max_area] %>
 
-  
+  <%= form.select :kind, Property.all.collect {|p| p.kind}.uniq, {include_blank: "Kind"}, style: "width: 100px;", value: params[:kind] %>
+
+  <%= form.select :city, Property.all.collect {|p| p.city}.uniq, {include_blank: "City"}, style: "width: 100px;", value: params[:city] %>
+
+  <%= form.select :zone, Property.all.collect {|p| p.zone}.uniq, {include_blank: "Zone"}, style: "width: 100px;", value: params[:zone] %>
+
 
   <%= form.submit "Search", class: "btn btn-primary", style: "margin-left: 10px;" %>
   <%= link_to "Clear", root_path, class: "btn btn-primary", style: "margin-left: 10px;" %>

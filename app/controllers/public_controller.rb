@@ -54,7 +54,14 @@ class PublicController < ApplicationController
       @properties = @properties.where(kind: params[:kind])
     end
 
+    if params[:city].present?
+      @properties = @properties.where(city: params[:city])
+    end
 
+    if params[:zone].present?
+      @properties = @properties.where(zone: params[:zone])
+    end
+    
 
 
 
